@@ -57,6 +57,8 @@ services:
         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+    ports:
+      - "${MYSQL_PORT}:3306"
     networks:
       backend:
         aliases:

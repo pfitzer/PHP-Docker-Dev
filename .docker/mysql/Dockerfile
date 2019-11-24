@@ -36,5 +36,5 @@ RUN chmod +x /bin/entrypoint.sh \
 
 ENTRYPOINT ["/bin/entrypoint.sh"]
 HEALTHCHECK CMD /bin/healthcheck.sh
-EXPOSE 3306 3306
+EXPOSE 3306
 CMD ["mysqld"]

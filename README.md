@@ -22,8 +22,11 @@ make docker-init
 make docker-build-from-scratch
 make docker-test
 
+# if not mysql root password is set in .env
 # get the generated mysql root password
 docker logs phpdd_mysql_1 2>&1 | grep GENERATED
 
-# goto http://0.0.0.0
+# goto http://localhost
 ````
+
+Connect to the defined database in .env with your prefered IDE: localhost:3306
