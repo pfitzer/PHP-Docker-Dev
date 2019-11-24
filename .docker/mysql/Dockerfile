@@ -28,7 +28,7 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 
 VOLUME /var/lib/mysql
 
-COPY ${SERVICE_DIR}/conf.d/my.conf /etc/my.conf
+COPY ${SERVICE_DIR}/conf.d/my.cnf /etc/my.cnf
 COPY ./.shared/scripts/configure_mysql_server.sh /bin/entrypoint.sh
 COPY ./.shared/scripts/mysql_healthcheck.sh /bin/healthcheck.sh
 RUN chmod +x /bin/entrypoint.sh \
