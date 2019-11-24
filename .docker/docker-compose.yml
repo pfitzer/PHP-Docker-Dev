@@ -6,7 +6,7 @@ networks:
 
 services:
   nginx:
-    image: phpdd/nginx
+    image: pfitzer/phpdd_nginx
     build:
       context: .
       dockerfile: ./nginx/Dockerfile
@@ -28,7 +28,7 @@ services:
           - ${APP_HOST}
 
   php-fpm:
-    image: phpdd/php-fpm
+    image: pfitzer/phpdd_phpfpm
     build:
       context: .
       dockerfile: ./php-fpm/Dockerfile
@@ -46,7 +46,7 @@ services:
       - backend
 
   mysql:
-    image: phpdd/mysql
+    image: pfitzer/phpdd_mysql
     build:
       context: .
       dockerfile: ./mysql/Dockerfile
@@ -66,7 +66,7 @@ services:
 
 
   workspace:
-    image: phpdd/workspace
+    image: pfitzer/phpdd_workspace
     build:
       context: .
       dockerfile: ./workspace/Dockerfile

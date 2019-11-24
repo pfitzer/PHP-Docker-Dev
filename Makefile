@@ -46,3 +46,7 @@ docker-up: ## Start all docker containers. To only start one container, use CONT
 .PHONY: docker-down
 docker-down: ## Stop all docker containers. To only stop one container, use CONTAINER=<service>
 	$(DOCKER_COMPOSE) down $(CONTAINER)
+
+.PHONY: docker-bundle
+docker-bundle: ## Stop all docker containers. To only stop one container, use CONTAINER=<service>
+	$(DOCKER_COMPOSE) bundle
