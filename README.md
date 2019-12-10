@@ -8,8 +8,10 @@ Development environment for PHP Developers
     * xdebug
     * gettext
     * mysqli
+    * pdo_mysql
 * Nginx
 * MySQL Community Edition 8.0.18
+* adminer:latest
 
 ## Getting started
 ````
@@ -26,7 +28,8 @@ make docker-test
 # get the generated mysql root password
 docker logs phpdd_mysql_1 2>&1 | grep GENERATED
 
-# goto http://localhost
+# goto http://0.0.0.0
+# adminer is running under http://0.0.0.0:8080
 ````
 
 Connect to the defined database in .env with your prefered IDE: localhost:3306

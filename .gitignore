@@ -9,3 +9,5 @@
 /composer.lock
 /tests/
 /phpunit.xml
+/report/
+runtest.sh
