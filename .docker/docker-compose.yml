@@ -28,18 +28,7 @@ services:
           - ${APP_HOST}
 
   php-fpm:
-    image: pfitzer/phpdd_phpfpm
-    build:
-      context: .
-      dockerfile: ./php-fpm/Dockerfile
-      args:
-        - APP_CODE_PATH=${APP_CODE_PATH_CONTAINER}
-        - APP_GROUP=${APP_GROUP}
-        - APP_GROUP_ID=${APP_GROUP_ID}
-        - APP_USER=${APP_USER}
-        - APP_USER_ID=${APP_USER_ID}
-        - TARGET_PHP_VERSION=${PHP_VERSION}
-        - TZ=${TIMEZONE}
+    image: pfitzer/php-fpm:latest
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
     networks:

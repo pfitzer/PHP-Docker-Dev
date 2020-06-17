@@ -1,14 +1,14 @@
 <?php
-  echo "Hello world (php)!\n";
+echo "Hello world (php)!<br>";
 
-$link = mysqli_connect('phpdd.local', 'phpdd', 'phpdd', 'phpdd', 3306);
+$dbh = new PDO('mysql:host=phpdd.local;dbname=phpdd', 'phpdd', 'phpdd', array(
+    PDO::ATTR_PERSISTENT => true
+));
 
-if (!$link) {
-  die('Could not connect!');
+if (!$dbh) {
+    die('Could not connect!');
 }
 
 echo 'Connected successfully to the database!';
 
-var_dump($link);
-
-mysqli_close($link);
+var_dump($dbh);
