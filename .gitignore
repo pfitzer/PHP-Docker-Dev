@@ -2,3 +2,12 @@
 .idea
 /.docker/.env
 /phpdd.dab
+/vendor/
+/.phpunit.result.cache
+/src/
+/composer.json
+/composer.lock
+/tests/
+/phpunit.xml
+/report/
+runtest.sh
