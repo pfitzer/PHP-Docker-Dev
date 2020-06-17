@@ -3,15 +3,10 @@ Heavily inspired by [Structuring the Docker setup for PHP Projects](https://www.
 
 Development environment for PHP Developers
 
-* PHP-fpm 7.3
-    * opcache
-    * xdebug
-    * gettext
-    * mysqli
-    * pdo_mysql
+* [pfitzer/php-fpm:latest](https://hub.docker.com/repository/docker/pfitzer/php-fpm)
 * Nginx
 * MySQL Community Edition 8.0.18
-* adminer:latest
+* [adminer:latest](https://hub.docker.com/_/adminer)
 
 ## Getting started
 ````
